@@ -46,6 +46,9 @@ def main():
     html = get_page_content(URL)
     current_hash = get_hash(html)
 
+    print(res.text[:1000])
+    return res.text
+
     # 前回の状態を保存（GitHub上のファイル）
     try:
         with open("last_hash.txt", "r") as f:
